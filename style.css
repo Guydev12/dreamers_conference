@@ -108,7 +108,9 @@ body {
   background: #fff;
   color: black;
 }
-
+.ht-cta:hover{
+  background: white;
+}
 /* about section */
 
 .section {
@@ -158,5 +160,37 @@ align-items: center;
 
 .btn-primary:hover {
   background-color: #2563eb; /* Blue-600 */
+}
+.countdown-container {
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+  padding: 0.3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 7rem;
+
+  z-index: 2;
+  letter-spacing: 1px;
+  animation: pulse 2s infinite;
+}
+.logo{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.03);
+    opacity: 0.95;
+  }
 }
 
