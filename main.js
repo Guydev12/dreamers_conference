@@ -21,7 +21,7 @@ cards.forEach((card) => {
   observer.observe(card);
 });
 
-const countDate = new Date("2025-09-07T09:00:00").getTime();
+const countDate = new Date("2025-09-07T15:00:00").getTime();
 setInterval(() => {
   const now = new Date().getTime();
   const gap = countDate - now;
