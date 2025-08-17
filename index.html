@@ -1,175 +1,339 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Conferance - Dreamers</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conférence Dreamers</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@tailwindcss/forms"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- Tailwind custom animation -->
+  <style>
+    @keyframes pulse-slow {
 
-  <link href="style.css" rel="stylesheet" />
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.3;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 0.5;
+      }
+    }
+
+    .animate-pulse-slow {
+      animation: pulse-slow 8s infinite ease-in-out;
+    }
+  </style>
+
 </head>
 
-<body>
-  <!--Tet page mwen an -->
-  <section class="hero" id="hero">
-    <!-- Logo dreamers -->
-    <header class="header">
-      <div class="logo">
-        <img src="asserts/logo.png" class="logo-img" alt="Dreamers-logo globe" />
-        <div id="countDown" class="countdown-container"></div>
-      </div>
-      <!--<button type="button" class="cta">Achter votre ticket</button>-->
-    </header>
+<body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+  <!-- Hero Section -->
+  <header
+    class="relative h-screen flex flex-col items-center justify-center text-center bg-gradient-to-tr from-blue-100 via-white to-blue-200 overflow-hidden">
 
-    <div class="hoverlay">
-      <h1>Conférence Dreamers – Inspirer, Agir, Transformer</h1>
-      <p class="sous-theme">
-        "Un événement pour soutenir l’éducation des enfants en difficulté.
-        Ensemble, faisons la différence."
-      </p>
-      <div class="cta-container">
-        <!-- <button type="button" class="cta ht-cta">
-          Recevoir mon invitation
-</button>-->
-
-        <a href="https://wa.me/50939292619?text=Bonjour%2C%20je%20souhaite%20acheter%20un%20billet%20pour%20la%20conf%C3%A9rence%20Dreamers%20via%20MonCash"
-          target="_blank">
-          🎟️ Acheter un billet – 500 HTG via MonCash
-        </a>
-      </div>
+    <!-- Decorative floating shapes -->
+    <div
+      class="absolute top-0 left-0 w-40 h-40 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow">
     </div>
-  </section>
+    <div
+      class="absolute bottom-10 right-10 w-60 h-60 bg-black rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow">
+    </div>
 
-  <div class="info">
+    <!-- Logo -->
+    <img src="asserts/rsz_21logo.png" alt="Dreamers Logo" class="w-32 md:w-40 mb-6 animate-fade-in" />
+
+    <!-- Title -->
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-black font-[Poppins] animate-fade-in-down">
+      Conférence <span class="text-blue-600">Dreamers</span> 2025
+    </h1>
+
+    <!-- Subtitle / Topic -->
+    <p class="text-xl md:text-2xl mb-8 font-semibold text-gray-800 font-[Inter] animate-fade-in">
+      Les grands secrets d'une prise de parole réussie
+    </p>
+
+    <!-- CTA -->
+    <a href="#billets"
+      class="px-8 py-4 bg-black text-blue-400 font-bold rounded-full shadow-lg hover:shadow-xl hover:bg-gray-900 transition transform hover:-translate-y-1">
+      Réserver maintenant
+    </a>
+  </header>
+  <div class="info text-white rounded-none bg-transparent">
     <p><i class="fas fa-calendar-alt"></i>Dimanche 07 septembre 2025</p>
     <p><i class="fas fa-clock"></i> 15h - 18h</p>
     <p>
-      <i class="fas fa-map-marker-alt"></i> Auditorium de l'universite
-      INUFOCAD
+      <i class="fas fa-map-marker-alt"></i> Église de la Bonne Nouvelle
     </p>
   </div>
+  <!-- À propos -->
+  <section id="about" class="py-20 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-6">À propos</h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
 
-  <section class="section-about" id="about">
-    <div class="about-image">
-      <img src="asserts/hero2.jpg" alt="Élèves image" />
-    </div>
-    <div class="about-text">
-      <p>
-        <strong>Dreamers</strong> conférence est une initiative pour collecter des fonds
-        en faveur des enfants défavorisés. Cette conférence est un espace
-        d’inspiration, d’apprentissage et d’engagement pour la jeunesse
-        haïtienne.
-      </p>
-    </div>
+      <strong>Dreamers</strong> conférence est une initiative pour collecter des fonds
+      en faveur des enfants défavorisés. Cette conférence est un espace
+      d’inspiration, d’apprentissage et d’engagement pour la jeunesse
+      haïtienne.
+
+    </p>
   </section>
 
-  <section class="intervenant-section" id="intervenant">
-    <h1>Notre Intervenant</h1>
-    <div class="intervenant-card">
-      <img src="asserts/dangelo.jpg" alt="Photo de l'intervenant" />
-      <div class="intervenant-info">
-        <h2>Dangelo Neard</h2>
-        <p>
-          Chercheur, penseur engagé et communicateur passionné, Dangelo Neard
-          apporte une vision percutante sur le rôle de la jeunesse dans la
-          construction d'une société plus équitable.
-        </p>
-        <p class="quote">
-          "Investir dans la jeunesse, c’est investir dans l’avenir."
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-tickets">
-    <div class="ticket-card card-no-outline">
-      <div class="ticket-deco"></div>
-
-      <h3 class="ticket-title">🎫 Dreamers Conférence</h3>
-      <p class="ticket-subtitle">
-        Accès à tous les panels, ateliers & surprises.
-      </p>
-
-      <div class="ticket-price-box">
-        <p class="ticket-price">Prix : <span>500 HTG</span></p>
-      </div>
-
-      <div class="ticket-details">
-        <h4>Ce que vous obtenez :</h4>
-        <ul class="ticket-list">
-          <li>Accès complet à la conférence</li>
-          <li>Participation aux ateliers & panels</li>
-          <li>Cadeaux & surprises exclusives</li>
-          <li>Networking avec jeunes leaders</li>
-        </ul>
-      </div>
-
-      <a href="https://wa.me/50939292619?text=Bonjour%2C+je+souhaite+acheter+un+billet+pour+la+Dreamers+Conf%C3%A9rence+du+7+septembre+via+MonCash.+Merci+de+me+donner+les+informations+de+paiement."
-        class="ticket-btn" target="_blank">
-        Acheter Maintenant via WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Comment c'était la dernière fois</h2>
-    <div class="grid-gallery">
-      <img src="asserts/p1.jpg" alt="Conférence 1" />
-      <img src="asserts/p2.jpg" alt="Conférence 2" />
-      <img src="asserts/p3.jpg" alt="Conférence 3" />
-      <img src="asserts/p4.jpg" alt="Conférence 4" />
-        <img src="asserts/p5.jpg" alt="Conférence 5" />
-    </div>
-  </section>
-
-  <section class="donation-section">
-    <div class="donation-content">
-      <h2>Soutenez notre mission ✨</h2>
-      <p>
-        Vous ne pouvez pas être présent ? Aidez-nous à faire la différence en
-        soutenant l’éducation des enfants en difficulté. Chaque don compte,
-        chaque geste transforme une vie.
-      </p>
-      <a href="https://guydev12.github.io/dreamers_don/" target="_blank"
-        class="donate-button">
-        Faire un don via WhatsApp
-      </a>
-    </div>
-  </section>
-  <section class="contact" id="contact"></section>
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <img src="asserts/logo.png" alt="Dreamers logo" />
-        <p>Dreamers – Inspirer, Agir, Transformer</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#intervenant">Intervenants</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-social">
-        <h4>Suivez-nous</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+  <!-- Programme
+   <!-- Programme 
+<section id="programme" class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center">Programme</h2>
+    <div class="space-y-8">
+      
+      <!-- Ouverture 
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <div class="text-indigo-600 font-bold text-xl">15:00</div>
+        <div class="flex-1 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-md">
+          <h3 class="font-semibold text-xl">Ouverture & Mot de bienvenue</h3>
+          <p class="text-gray-600 dark:text-gray-300">Présentation de l’événement et des intervenants.</p>
         </div>
       </div>
+
+     
+
+    </div>
+  </div>
+</section> -->
+
+  <!-- Intervenants -->
+  <section id="speakers" class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center">Intervenants</h2>
+    <div class="flex flex-col gap-12">
+
+      <!-- Speaker Card -->
+      <div
+        class="flex flex-col md:flex-row bg-gray-100 dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:scale-105 transition">
+
+        <!-- Image -->
+        <div class="md:w-1/2 h-64 md:h-auto">
+          <img src="asserts/dangelo.png" alt="Speaker"
+            class="w-full h-full object-cover rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
+        </div>
+
+        <!-- Text Card -->
+        <div class="md:w-1/2 p-6 flex flex-col justify-center bg-white dark:bg-gray-800">
+          <h3 class="text-2xl font-bold mb-2 text-gray-900 dark:text-white">Dangelo Neard</h3>
+          <p class="text-indigo-600 dark:text-indigo-400 font-medium mb-3">
+            PDG de la Bibliothèque Nationale d’Haïti (BNH)
+          </p>
+          <p class="text-gray-600 dark:text-gray-300 mb-4">
+            Chercheur, penseur engagé et communicateur passionné, Dangelo Neard apporte une vision percutante
+            sur le rôle de la jeunesse dans la construction d'une société plus équitable.
+          </p>
+          <p class="italic text-gray-700 dark:text-gray-400">
+            "Investir dans la jeunesse, c’est investir dans l’avenir."
+          </p>
+        </div>
+
+      </div>
+      <!-- Ajouter d'autres intervenants ici -->
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Billets -->
+  <section id="billets" class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-4xl font-bold mb-12 text-center">Billets</h2>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 max-w-6xl mx-auto">
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg p-8 text-center flex-1 min-w-[250px] max-w-[320px]">
+        <h3 class="text-2xl font-bold mb-4">Dreamers Conference Tickets</h3>
+        <p class="text-4xl font-extrabold mb-6">500 HTG</p>
+        <div class="flex flex-col gap-3">
+          <a href="https://wa.me/50939292619?text=Bonjour%2C%20je%20souhaite%20acheter%20un%20billet%20pour%20la%20conf%C3%A9rence%20Dreamers%20via%20MonCash"
+            class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-500 transition">
+            Acheter Maintenant - MonCash
+          </a>
+          <a href="https://wa.me/50939292619?text=Bonjour%2C%20je%20souhaite%20acheter%20un%20billet%20pour%20la%20conf%C3%A9rence%20Dreamers%20via%20Natcash"
+            class="px-6 py-3 bg-red-600 font-bold text-white rounded-lg hover:bg-red-500 transition">
+            Acheter Maintenant - Natcash
+          </a>
+        </div>
+      </div>
+      <!-- Ajouter d'autres types de billets ici si besoin -->
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center">FAQ</h2>
+    <div class="space-y-6">
+
+      <details class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <summary class="font-semibold cursor-pointer">
+          Comment puis-je acheter un billet ?
+        </summary>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          L’achat ne se fait pas directement sur le site.
+          Pour plus de confiance et de sécurité, vous serez redirigé vers
+          <strong>WhatsApp</strong> afin de finaliser votre achat avec notre équipe officielle.
+          Vous pourrez choisir entre <span class="font-semibold">MonCash</span> ou <span
+            class="font-semibold">Natcash</span>.
+        </p>
+      </details>
+
+      <details class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <summary class="font-semibold cursor-pointer">
+          Comment vais-je recevoir mon billet ?
+        </summary>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Une fois le paiement confirmé, vous recevrez un <strong>QR Code unique</strong> sur WhatsApp.
+          Ce code servira de billet d’entrée et sera scanné le jour de l’événement.
+        </p>
+      </details>
+
+      <details class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <summary class="font-semibold cursor-pointer">
+          Puis-je obtenir un remboursement ?
+        </summary>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Les billets ne sont pas remboursables, mais ils sont <strong>transférables</strong>.
+          Vous pouvez donner ou revendre votre billet à une autre personne si vous ne pouvez pas assister.
+        </p>
+      </details>
+
+      <details class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <summary class="font-semibold cursor-pointer">
+          Puis-je acheter plusieurs billets en une seule fois ?
+        </summary>
+        <p class="mt-2 text-gray-600 dark:text-gray-300">
+          Oui, vous pouvez acheter plusieurs billets en une seule transaction via WhatsApp.
+          Chaque billet aura son propre <strong>QR Code nominatif</strong>.
+        </p>
+      </details>
+
+    </div>
+  </section>
+  <!-- Galerie -->
+  <section id="gallery" class="py-20 px-6 bg-gray-100 dark:bg-gray-800">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-900 dark:text-gray-100">
+      Comment c'était la dernière fois
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto">
+      <img src="asserts/1.jpg" alt="Conférence 1" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/2.jpg" alt="Conférence 2" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/3.jpg" alt="Conférence 3" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/8.jpg" alt="Conférence 4" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/7.jpg" alt="Conférence 5" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/p1.jpg" alt="Conférence 1" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/p2.jpg" alt="Conférence 2" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/p3.jpg" alt="Conférence 3" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/p4.jpg" alt="Conférence 4" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+      <img src="asserts/p5.jpg" alt="Conférence 5" class="rounded-lg shadow-md hover:scale-105 transition-transform" />
+    </div>
+  </section>
+
+  <!-- Donation -->
+  <section id="donation" class="py-20 px-6 bg-indigo-700 text-white text-center rounded-lg mx-6 md:mx-20 shadow-lg">
+    <h2 class="text-4xl font-bold mb-6">Soutenez notre mission ✨</h2>
+    <p class="text-lg mb-6 max-w-3xl mx-auto leading-relaxed">
+      Vous ne pouvez pas être présent ? Aidez-nous à faire la différence en soutenant l’éducation des enfants en
+      difficulté. Chaque don compte, chaque geste transforme une vie.
+    </p>
+    <a href="https://guydev12.github.io/dreamers_don/" target="_blank"
+      class="px-8 py-3 bg-white text-indigo-700 font-semibold rounded-full shadow hover:bg-gray-200 transition">
+      Faire un don via WhatsApp
+    </a>
+
+  </section >
+
+ 
+  <!-- Contact -->
+  <section id="contact"
+    class="py-20 mt-4 mb-4 px-6 bg-gradient-to-r from-indigo-600 to-purple-600 dark:bg-gray-800 text-white text-center rounded-xl mx-6 md:mx-20 shadow-lg">
+    <h2 class="text-4xl font-bold mb-12">Contactez-nous ✨</h2>
+    <p class="text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+      Pour toute question, réservation ou informations, contactez-nous directement via WhatsApp, email ou téléphone.
+      Nous répondrons rapidement !
+    </p>
+
+    <div class="flex flex-col md:flex-row mb-6 justify-center items-center gap-8">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/50939292619" target="_blank"
+        class="flex items-center gap-3 w-full px-8 py-4 bg-green-500 hover:bg-green-600 transition rounded-2xl shadow-lg transform hover:-translate-y-1 hover:scale-105">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.472-.149-.671.15-.198.297-.767.967-.939 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.654-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.52.149-.173.198-.298.298-.497.099-.198.05-.372-.025-.52-.074-.149-.671-1.611-.921-2.207-.242-.579-.487-.5-.671-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.793.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.718 2.006-1.413.248-.694.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z" />
+        </svg>
+        WhatsApp
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:judlinecdreamers@gmail.com"
+        class="flex w-full items-center gap-3 px-8 py-4 bg-indigo-500 hover:bg-indigo-600 transition rounded-2xl shadow-lg transform hover:-translate-y-1 hover:scale-105">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" />
+        </svg>
+        Email
+      </a>
+
+      <!-- Phone -->
+      <a href="tel:+50931806187"
+        class="flex items-center gap-3 w-full px-8 py-4 bg-gray-800 hover:bg-gray-900 transition rounded-2xl shadow-lg transform hover:-translate-y-1 hover:scale-105">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+          <path
+            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C9.94 21 3 14.06 3 6c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+        </svg>
+        Appeler
+      </a>
+
     </div>
 
-    <div class="footer-bottom">
-      <p>&copy; 2025 Dreamers. Tous droits réservés.</p>
+
+    <div class="flex flex-col justify-center">
+      <p class="mb-4">📍 Port-au-Prince . Eglise de la Bonne, Haïti</p>
+      <div id="localisation" class="py-20 px-6 bg-gray-100 dark:bg-gray-800 text-center">
+        <h2 class="text-4xl font-bold mb-8">Localisation</h2>
+
+        <!-- Google Maps Embed -->
+        <div class="rounded-lg overflow-hidden shadow-lg mb-6">
+          <iframe class="w-full h-64"
+            src="https://maps.google.com/maps?q=Université%20INUFOCAD%2C%20Avenue%20Maïs%20Gâté%208%2C%20Port-au-Prince%2C%20Haïti&z=17&output=embed"
+            allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+        <!-- GPS Buttons -->
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <a href="https://www.google.com/maps/dir/?api=1&destination=Université+INUFOCAD,+Avenue+Maïs+Gâté+8,+Port-au-Prince,+Haïti"
+            target="_blank"
+            class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-500 transition">
+            Ouvrir avec Google Maps
+          </a>
+          <a href="https://waze.com/ul?ll=18.5475,-72.2920&navigate=yes" target="_blank"
+            class="px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow hover:bg-red-500 transition">
+            Ouvrir avec Waze
+          </a>
+        </div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-indigo-700 text-white text-center">
+    <p>&copy; 2025 Dreamers Conférence. Tous droits réservés.</p>
+    <div class="flex justify-center gap-4 mt-2">
+
+      <a href="https://web.facebook.com/profile.php?id=61575231363300">Facebook</a>
+
     </div>
   </footer>
-  <script src="main.js"></script>
 </body>
 
 </html>
